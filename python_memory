@@ -61,6 +61,12 @@ def display_start_screen():
     # 흰색으로 동그라미를 그리는데 중심좌표는 start_button 의 중심좌표를 따라가고,
     # 반지름은 60, 선두께는 5
 
+    msg = game_font.render(f"{curr_level}", True, WHITE)
+    msg_rect = msg.get_rect(center=start_button.center)
+    screen.blit(msg, msg_rect)
+
+
+
 # 게임 화면 보여주기
 def display_game_screen():
     global hidden
@@ -193,4 +199,3 @@ pygame.time.delay(5000)
 
 # 게임 종료
 pygame.quit()
-
